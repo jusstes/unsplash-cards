@@ -3,9 +3,8 @@ import Card from '../../components/Card/Card';
 import EmptyCardComponent from '../../components/EmptyCardComponent/EmptyCardComponent';
 
 function CardsContainer({ cards }) {
-  console.log(cards);
   return (
-    <ul>
+    <ul className="cards">
       {cards.length ? (
         cards.map((card) => <Card card={card} key={card.id} />)
       ) : (

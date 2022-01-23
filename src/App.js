@@ -7,10 +7,11 @@ import CardsContainer from './containers/CardsContainer/CardsContainer';
 
 function App() {
   const dispatch = useDispatch();
-  const cards = useSelector(cardsSelector); // полученные карточки
+  const cards = useSelector(cardsSelector);
 
   React.useEffect(() => {
-    fetchCards().then((data) => dispatch(setCards(data)));
+    // fetchCards().then((data) => dispatch(setCards(data)));
+    dispatch(setCards(fetchCards()));
   }, [dispatch]);
 
   return <CardsContainer cards={cards} />;

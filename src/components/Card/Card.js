@@ -1,8 +1,15 @@
 import React from 'react';
 
 function Card({ card }) {
-  console.log(card);
-  return <>p</>;
+  return (
+    <li className="card">
+      <img
+        className="card__image"
+        src={card.urls?.small}
+        alt={card.alt_description}
+      />
+    </li>
+  );
 }
 
 export default Card;
