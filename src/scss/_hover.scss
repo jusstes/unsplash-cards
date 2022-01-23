@@ -1,0 +1,9 @@
+$from_tablet: 1024px;
+
+@mixin hover {
+  @media (min-width: $from_tablet) {
+    &:hover {
+      @content;
+    }
+  }
+}

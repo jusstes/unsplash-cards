@@ -2,11 +2,28 @@ import React from 'react';
 import Card from '../../components/Card/Card';
 import EmptyCardComponent from '../../components/EmptyCardComponent/EmptyCardComponent';
 
-function CardsContainer({ cards }) {
+function CardsContainer({
+  cards,
+  handleDeleteCard,
+  handleLikeCard,
+  isLikedCards,
+  likedCards,
+}) {
+  const visibleCards = isLikedCards ? likedCards : cards;
+
   return (
     <ul className="cards">
-      {cards.length ? (
-        cards.map((card) => <Card card={card} key={card.id} />)
+      {visibleCards.length ? (
+        visibleCards.map((card) => (
+          <Card
+            card={card}
+            key={card.id}
+            handleDeleteCard={handleDeleteCard}
+            handleLikeCard={handleLikeCard}
+            isLikedCards={isLikedCards}
+            isLikedCard={likedCards.includes(card)}
+          />
+        ))
       ) : (
         <EmptyCardComponent />
       )}

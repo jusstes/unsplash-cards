@@ -1,6 +1,10 @@
+// import mixins
+@import './hover';
+
 // import base
 @import './base';
 
 //import modules
 @import './src/containers/CardsContainer/cards';
 @import './src/components/Card/card';
+@import './src/components/Filter/filter';

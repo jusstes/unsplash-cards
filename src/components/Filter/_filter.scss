@@ -1,0 +1,16 @@
+.filter {
+  display: flex;
+  align-items: center;
+  width: 95%;
+  margin: 20px auto 0;
+
+  &__text {
+    margin: 0 20px 0 0;
+  }
+
+  &__checkbox {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+  }
+}

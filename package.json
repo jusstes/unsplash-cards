@@ -49,6 +49,7 @@
     "eslint-plugin-react": "^7.28.0",
     "gh-pages": "^3.2.3",
     "prettier": "^2.5.1",
-    "sass": "^1.49.0"
+    "sass": "^1.49.0",
+    "sass-loader": "^12.4.0"
   }
 }
