@@ -1,7 +1,11 @@
 import React from 'react';
 
 function EmptyCardComponent() {
-  return <p className="cards__empty">Карточек не найдено</p>;
+  return (
+    <li className="card">
+      <p className="cards__empty">Карточек не найдено</p>
+    </li>
+  );
 }
 
 export default EmptyCardComponent;

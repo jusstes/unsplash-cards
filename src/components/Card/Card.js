@@ -25,14 +25,14 @@ function Card({
         } card__svg`}
         title="Лайкнуть фотографию"
       />
-      {!isLikedCards ? (
+      {!isLikedCards && (
         <button
           type="button"
           onClick={handleCardDelete}
           className="card__delete card__svg"
           title="Удалить фотографию"
         />
-      ) : null}
+      )}
       <img
         className="card__image"
         src={card.urls?.small}
